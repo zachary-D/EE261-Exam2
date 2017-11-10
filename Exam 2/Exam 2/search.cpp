@@ -6,7 +6,6 @@ using namespace std;
 
 
 int main() {
-
 	string wordForQuery;
 
 	cout << "Enter a word to be searched in the file words.txt:";
@@ -15,15 +14,24 @@ int main() {
 	ifstream inFile;
 	inFile.open("words.txt");
 
-	string word;
+	if (!inFile)
+	{
+		cout << "An error was encountered opening \"words.txt\"." << endl;
+	}
+	else
+	{
+		string word;
 
-	while (inFile) {
-		inFile >> word;
+		while (inFile) {
+			inFile >> word;
 
-		if (word == wordForQuery) {
-			cout << "Found!" << endl;
+			if (word == wordForQuery) {
+				cout << "Found!" << endl;
+			}
 		}
 	}
+
+	cin.get();	cin.get();	//Hold the window open
 
 	return 0;
 }
