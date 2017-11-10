@@ -23,16 +23,18 @@ void isFailing(double average)
 		cout << "Failing" << endl;
 }
 
+bool comparisonTest()
+{
+	string num1 = "899";
+	string num2 = "9";
+
+	return num1 < num2;
+}
+
 
 int main()
 {
-	vector<double> grades = { 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 };
-
-	for(auto iter = grades.begin(); iter != grades.end(); iter++)
-	{
-		cout << *iter << " | ";
-		isFailing(*iter);
-	}
+	cout << comparisonTest();
 
 	cin.get(); cin.get();	//Hold the window open
 
