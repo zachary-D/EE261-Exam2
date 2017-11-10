@@ -21,15 +21,18 @@ int main() {
 	else
 	{
 		string word;
+		bool found = false;
 
 		while (inFile) {
 			inFile >> word;
 
 			if (word == wordForQuery) {
 				cout << "Found!" << endl;
+				found = true;
 				break;
 			}
 		}
+		if(!found) cout << "Not found!" << endl;
 	}
 
 	cin.get();	cin.get();	//Hold the window open
