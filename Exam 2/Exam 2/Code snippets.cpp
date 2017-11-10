@@ -4,8 +4,8 @@ using namespace std;
 
 void validWeekday(int day)
 {
-	int weekday = day;
-	//cin >> weekday;
+	int weekday;
+	cin >> weekday;
 	if (0 < weekday && weekday < 8)
 		cout << "Input is valid." << endl;
 	else
