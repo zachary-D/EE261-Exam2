@@ -3,7 +3,11 @@
 using namespace std;
 
 // Q1. The current program does not compile. Add one statement here to fix the problem and make it compile. (0.5 point) Explain why your statement makes the difference. (0.5)
+
+//I'm assuming that the #include <iomanip> was left out by mistake, and not meant to be the solution to this question because the rest of the headers are up at the top, but I'm putting it here just in case
+
 #include <iomanip>		//setprecision() is defined in iomanip, and therefore iomanip needs to be included in order for the program to compile
+void power(double, int, double);	//This is needed to tell the compiler that power is 
 
 int main() {
 	double result = 0;
