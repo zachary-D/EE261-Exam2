@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -12,12 +13,25 @@ void validWeekday(int day)
 		cout << "Input is invalid." << endl;
 }
 
+void isFailing(double average)
+{
+	if (average >= 60.00)
+		if (average < 70.00)
+			cout << "Passing but marginal." << endl;
+		else cout << "Passing" << endl;
+	else
+		cout << "Failing" << endl;
+}
+
+
 int main()
 {
-	for (int i = -5; i < 10; i++)
+	vector<double> grades = { 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 };
+
+	for(auto iter = grades.begin(); iter != grades.end(); iter++)
 	{
-		cout << i << " | ";
-		validWeekday(i);
+		cout << *iter << " | ";
+		isFailing(*iter);
 	}
 
 	cin.get(); cin.get();	//Hold the window open
