@@ -27,6 +27,7 @@ int main() {
 
 			if (word == wordForQuery) {
 				cout << "Found!" << endl;
+				break;
 			}
 		}
 	}
